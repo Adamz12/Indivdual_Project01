@@ -11,6 +11,10 @@ a {
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 button {
   cursor: pointer;
 }
@@ -207,6 +211,7 @@ nav {
   font-weight: 700;
   font-size: 24px;
   margin-right: 12px;
+  color: #243e36;
 }
 
 .nav__link--seperate {
@@ -245,6 +250,7 @@ LANDING
 }
 
 .header__description {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 40%;
@@ -277,24 +283,25 @@ LANDING
 }
 
 form {
-  border: 2px solid transparent;
+  border: 2px solid #8b97a7;
   width: 100%;
   height: 15%;
   border-radius: 9999px;
   padding: 8px 0;
   display: flex;
   justify-content: center;
+  transition: 300ms ease;
 }
 
 form:hover {
   --tw-border-opacity: 1;
-  border-color: rgb(160 174 192 / var(--tw-border-opacity));
+  border-color: #5d3eff
 }
 
 form:focus {
   --tw-border-opacity: 2;
   border-color: rgb(100 21 255 / var(--tw-border-opacity));
-  outline: transparent solid 2px;
+  outline: transparent rgb(160 174 192 / var(--tw-border-opacity)) solid 2px;
   outline-offset: 2px;
 }
 
@@ -326,7 +333,7 @@ FEATURES
   display: flex;
   width: calc(100% / 3) - 0.1px;
   padding: 32px 8px;
-  margin: 0 16px;
+  margin: 0 4px;
 }
 
 .service__description {
@@ -342,6 +349,7 @@ FEATURES
   color: #6415ff;
   border: 1px solid rgb(226, 232, 240);
   width: 40px;
+  padding: 28px;
   height: 40px;
   border-radius: 50%;
 }
@@ -1274,4 +1282,71 @@ footer {
     width: 100%;
     margin-right: 0;
   }
+}
+
+@media(max-width:350px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+ .price__title {
+  font-size: 36px;
+ }
+ .btn {
+  position: absolute;
+  bottom: 120px;
+  background-color: #6415ff;
+  padding: 12px 32px;
+  border-radius: 9999px;
+  font-size: 18px;
+  color: white;
+  transition: 300ms ease;
+  cursor: pointer;
+  /* text-align: inherit; */
+  border: none;
+}
+
+.header__description {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  border: none;
+  font-weight: 500;
+  font-size: 16px;
+  opacity: 0.5;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 40px;
+  outline: none;
+}
+
+.row {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.button__container {
+  padding: 32px 16px;
+}
+
+.plan__features {
+  text-align: center;
+  padding: 32px;
+  margin: 0 -32px;
+  border-top: solid rgb(226, 232, 240);
+  border-bottom: solid rgb(226, 232, 240);
+  width: 140%;
+}
+
+
 }
